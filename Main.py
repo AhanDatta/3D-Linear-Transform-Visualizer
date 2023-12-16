@@ -31,7 +31,6 @@ def plot (v_1, v_2, v_3):
 
 #Runs the animation
 def run_animation():
-    #Bool for if the annimation is running
     anim_running = True
 
     #Changes the running state of the animation on spacebar press
@@ -62,7 +61,7 @@ def run_animation():
             v_3 = e_3_prime
         plot(v_1, v_2, v_3)
 
-    #Checks for key press event and changes state of animation if detected
+    #Checks for key press event and changes state of animation if spacebar is detected
     fig.canvas.mpl_connect('key_press_event', on_key)
     ani = animation.FuncAnimation(fig=fig, func=update, frames=ceil(TOT_FRAMES + BUFFER_FRAMES), interval= (1/float(FPS)))
     plt.show()
@@ -77,7 +76,7 @@ e_3 = np.array([0.,0.,1.])
 initial_matrix = np.array([e_1, e_2, e_3])
 
 #Prompt the user to enter the data into the excel sheet
-#input("Please enter the desired 3x3 matrix entries into the spreadsheet. Then close the sheet. Press enter when complete.")
+input("Please enter the desired 3x3 matrix entries into the spreadsheet. Then close the sheet. Press enter when complete.")
 
 #Creates the matrix that will hold the matrix
 transform_matrix = np.array([])

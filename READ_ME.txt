@@ -1,0 +1,1 @@
+I originally made this program to help me explain the geometric intuitions behind linear algebra to a friend of mine. I hope it can be helpful for other people to do the same. Note that the program works for any set of starting vectors, so it can be used to demonstrate how change of basis works as well. All you have to do is change e_1, e_2, and e_3.
